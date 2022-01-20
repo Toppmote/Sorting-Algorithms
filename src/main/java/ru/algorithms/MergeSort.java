@@ -49,10 +49,11 @@ public class MergeSort<T extends Number> implements Sorter<T> {
         int i = 0, j = 0;
         int k = left;
         while (i < leftLength && j < rightLength) {
-            if (leftArr[i].doubleValue() <= rightArr[j].doubleValue())
-                array[k++] = leftArr[i++];
-            else
-                array[k++] = rightArr[j++];
+            array[k++] = leftArr[i].doubleValue() <= rightArr[j].doubleValue() ? leftArr[i++] : rightArr[j++];
+//            if (leftArr[i].doubleValue() <= rightArr[j].doubleValue())
+//                array[k++] = leftArr[i++];
+//            else
+//                array[k++] = rightArr[j++];
         }
         while (i < leftLength)
             array[k++] = leftArr[i++];
