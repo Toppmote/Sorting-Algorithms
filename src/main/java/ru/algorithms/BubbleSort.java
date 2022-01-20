@@ -7,12 +7,12 @@ import ru.utils.SortingUtils;
  * Worst time: 0(n^2)
  * Average time: 0(n^2)
  * Best time: 0(n)
- *
+ * <p>
  * Memory cost: 0(1)
  *
  * @param <T> Data type of array elements
  */
-public class BubbleSort<T extends Number> implements Sorter<T>{
+public class BubbleSort<T extends Number> implements Sorter<T> {
 
     /**
      * Just swap adjacent elements if they are in the wrong order
@@ -21,9 +21,9 @@ public class BubbleSort<T extends Number> implements Sorter<T>{
      */
     @Override
     public void sort(T[] array) {
-        for(int i = 0; i < array.length - 1; i++)
+        for (int i = 0; i < array.length - 1; i++)
             for (int j = 0; j < array.length - i - 1; j++)
-                if(array[j].doubleValue() > array[j + 1].doubleValue())
+                if (array[j].doubleValue() > array[j + 1].doubleValue())
                     SortingUtils.swap(array, j, j + 1);
     }
 
