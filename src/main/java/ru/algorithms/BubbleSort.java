@@ -4,6 +4,11 @@ import ru.utils.SortingUtils;
 
 /**
  * Implementation of "Bubble sort" algorithm.
+ * Worst time: 0(n^2)
+ * Average time: 0(n^2)
+ * Best time: 0(n)
+ *
+ * Memory cost: 0(1)
  *
  * @param <T> Data type of array elements
  */
