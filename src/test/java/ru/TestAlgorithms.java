@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.algorithms.BubbleSort;
+import ru.algorithms.CocktailShakerSort;
 import ru.algorithms.Sorter;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -80,6 +81,12 @@ public class TestAlgorithms {
     @DisplayName("Bubble Sort test")
     void testBubbleSort() {
         sortTest(new BubbleSort<>());
+    }
+
+    @Test
+    @DisplayName("Cocktail Shaker Sort test")
+    void testCocktailShakerSort() {
+        sortTest(new CocktailShakerSort<>());
     }
 
 }
