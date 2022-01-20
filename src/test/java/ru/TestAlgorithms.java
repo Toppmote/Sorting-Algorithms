@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.algorithms.BubbleSort;
 import ru.algorithms.CocktailShakerSort;
+import ru.algorithms.SelectionSort;
 import ru.algorithms.Sorter;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,7 +24,7 @@ public class TestAlgorithms {
     /**
      * Size of an arrays
      */
-    public static final int ARRAY_LEN = 10_000;
+    public static final int ARRAY_LEN = 50_000;
 
     /**
      * Bound for generation of test arrays
@@ -87,6 +88,12 @@ public class TestAlgorithms {
     @DisplayName("Cocktail Shaker Sort test")
     void testCocktailShakerSort() {
         sortTest(new CocktailShakerSort<>());
+    }
+
+    @Test
+    @DisplayName("Selection Sort test")
+    void testSelectionSort() {
+        sortTest(new SelectionSort<>());
     }
 
 }
