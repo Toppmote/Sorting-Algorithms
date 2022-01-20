@@ -82,4 +82,10 @@ public class TestAlgorithms {
         sortTest(new BubbleSort<>());
     }
 
+    @Test
+    @DisplayName("Cocktail Shaker Sort test")
+    void testCocktailShakerSort() {
+        sortTest(new BubbleSort<>());
+    }
+
 }
