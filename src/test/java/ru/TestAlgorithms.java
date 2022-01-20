@@ -3,10 +3,7 @@ package ru;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.algorithms.BubbleSort;
-import ru.algorithms.CocktailShakerSort;
-import ru.algorithms.SelectionSort;
-import ru.algorithms.Sorter;
+import ru.algorithms.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -94,6 +91,12 @@ public class TestAlgorithms {
     @DisplayName("Selection Sort test")
     void testSelectionSort() {
         sortTest(new SelectionSort<>());
+    }
+
+    @Test
+    @DisplayName("Merge Sort test")
+    void testMergeSort() {
+        sortTest(new MergeSort<>());
     }
 
 }
