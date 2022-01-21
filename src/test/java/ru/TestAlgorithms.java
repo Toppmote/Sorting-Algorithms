@@ -105,4 +105,10 @@ public class TestAlgorithms {
         sortTest(new HeapSort<>());
     }
 
+    @Test
+    @DisplayName("Insertion Sort test")
+    void testInsertionSort() {
+        sortTest(new InsertionSort<>());
+    }
+
 }
