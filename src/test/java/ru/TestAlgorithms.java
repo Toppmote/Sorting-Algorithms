@@ -21,7 +21,7 @@ public class TestAlgorithms {
     /**
      * Size of an arrays
      */
-    public static final int ARRAY_LEN = 50_000;
+    public static final int ARRAY_LEN = 100_000;
 
     /**
      * Bound for generation of test arrays
@@ -97,6 +97,12 @@ public class TestAlgorithms {
     @DisplayName("Merge Sort test")
     void testMergeSort() {
         sortTest(new MergeSort<>());
+    }
+
+    @Test
+    @DisplayName("Heap Sort test")
+    void testHeapSort() {
+        sortTest(new HeapSort<>());
     }
 
 }
