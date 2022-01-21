@@ -7,7 +7,7 @@ import ru.utils.SortingUtils;
  * Worst time: 0(n^2)
  * Average time: 0(n^2)
  * Best time: 0(n^2)
- *
+ * <p>
  * Memory cost: 0(1)
  *
  * @param <T> Data type of array elements

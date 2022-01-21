@@ -41,6 +41,14 @@ public class MergeSort<T extends Number> implements Sorter<T> {
         merge(array, left, middle, right);
     }
 
+    /**
+     * Procedure of merging 2 arrays
+     *
+     * @param array  array (contains 2 arrays)
+     * @param left   left index (beginning of first array)
+     * @param middle middle index
+     * @param right  right index (end of second array)
+     */
     private void merge(T[] array, int left, int middle, int right) {
         int leftLength = middle - left + 1;
         int rightLength = right - middle;
@@ -48,13 +56,8 @@ public class MergeSort<T extends Number> implements Sorter<T> {
         T[] rightArr = Arrays.copyOfRange(array, middle + 1, right + 1);
         int i = 0, j = 0;
         int k = left;
-        while (i < leftLength && j < rightLength) {
+        while (i < leftLength && j < rightLength)
             array[k++] = leftArr[i].doubleValue() <= rightArr[j].doubleValue() ? leftArr[i++] : rightArr[j++];
-//            if (leftArr[i].doubleValue() <= rightArr[j].doubleValue())
-//                array[k++] = leftArr[i++];
-//            else
-//                array[k++] = rightArr[j++];
-        }
         while (i < leftLength)
             array[k++] = leftArr[i++];
         while (j < rightLength)
