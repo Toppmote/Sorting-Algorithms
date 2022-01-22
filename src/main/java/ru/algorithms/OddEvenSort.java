@@ -22,15 +22,16 @@ public class OddEvenSort<T extends Comparable<? super T>> implements Sorter<T> {
      */
     @Override
     public void sort(T[] array) {
+        int arrayLen = array.length;
         boolean isSorted;
         do {
             isSorted = true;
-            for (int i = 1; i < array.length - 2; i += 2)
+            for (int i = 1; i < arrayLen - 1; i += 2)
                 if (array[i].compareTo(array[i + 1]) > 0) {
                     SortingUtils.swap(array, i, i + 1);
                     isSorted = false;
                 }
-            for (int i = 0; i < array.length - 2; i += 2)
+            for (int i = 0; i < arrayLen - 1; i += 2)
                 if (array[i].compareTo(array[i + 1]) > 0) {
                     SortingUtils.swap(array, i, i + 1);
                     isSorted = false;
