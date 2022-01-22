@@ -12,7 +12,7 @@ import ru.utils.SortingUtils;
  *
  * @param <T> Data type of array elements
  */
-public class CocktailShakerSort<T extends Number> implements Sorter<T> {
+public class CocktailShakerSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * Like "Bubble sort", but traverses through a given array in both directions alternatively.
@@ -26,7 +26,7 @@ public class CocktailShakerSort<T extends Number> implements Sorter<T> {
         int end = array.length;
         do {
             for (int i = 0; i < array.length - 1; i++)
-                if (array[i].doubleValue() > array[i + 1].doubleValue()) {
+                if (array[i].compareTo(array[i + 1]) > 0) {
                     SortingUtils.swap(array, i, i + 1);
                     isSwapped = true;
                 }
@@ -35,7 +35,7 @@ public class CocktailShakerSort<T extends Number> implements Sorter<T> {
             isSwapped = false;
             end--;
             for (int i = end - 1; i >= start; i--)
-                if (array[i].doubleValue() > array[i + 1].doubleValue()) {
+                if (array[i].compareTo(array[i + 1]) > 0) {
                     SortingUtils.swap(array, i, i + 1);
                     isSwapped = true;
                 }

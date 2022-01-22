@@ -12,7 +12,7 @@ import ru.utils.SortingUtils;
  *
  * @param <T> Data type of array elements
  */
-public class HeapSort<T extends Number> implements Sorter<T> {
+public class HeapSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * 1. Build a max heap from the array;
@@ -56,9 +56,9 @@ public class HeapSort<T extends Number> implements Sorter<T> {
         int leftChildIndex = 2 * nodeIndex + 1;
         int rightChildIndex = 2 * nodeIndex + 2;
         int maxElemIndex = nodeIndex;
-        if (leftChildIndex < heapSize && array[leftChildIndex].doubleValue() > array[maxElemIndex].doubleValue())
+        if (leftChildIndex < heapSize && array[leftChildIndex].compareTo(array[maxElemIndex]) > 0)
             maxElemIndex = leftChildIndex;
-        if (rightChildIndex < heapSize && array[rightChildIndex].doubleValue() > array[maxElemIndex].doubleValue())
+        if (rightChildIndex < heapSize && array[rightChildIndex].compareTo(array[maxElemIndex]) > 0)
             maxElemIndex = rightChildIndex;
         if (maxElemIndex != nodeIndex) {
             SortingUtils.swap(array, maxElemIndex, nodeIndex);

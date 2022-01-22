@@ -12,7 +12,7 @@ import ru.utils.SortingUtils;
  *
  * @param <T> Data type of array elements
  */
-public class SelectionSort<T extends Number> implements Sorter<T> {
+public class SelectionSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * In each iteration, we assume that the first unsorted element is the minimum and iterate through the rest to see
@@ -26,7 +26,7 @@ public class SelectionSort<T extends Number> implements Sorter<T> {
         for (int i = 0; i < array.length; i++) {
             int minIndex = i;
             for (int j = i; j < array.length; j++)
-                if (array[j].doubleValue() < array[minIndex].doubleValue())
+                if (array[j].compareTo(array[minIndex]) < 0)
                     minIndex = j;
             if (minIndex != i)
                 SortingUtils.swap(array, i, minIndex);

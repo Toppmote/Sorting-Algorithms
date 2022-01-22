@@ -12,7 +12,7 @@ import ru.utils.SortingUtils;
  *
  * @param <T> Data type of array elements
  */
-public class BubbleSort<T extends Number> implements Sorter<T> {
+public class BubbleSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * Just swap adjacent elements if they are in the wrong order
@@ -23,7 +23,7 @@ public class BubbleSort<T extends Number> implements Sorter<T> {
     public void sort(T[] array) {
         for (int i = 0; i < array.length - 1; i++)
             for (int j = 0; j < array.length - i - 1; j++)
-                if (array[j].doubleValue() > array[j + 1].doubleValue())
+                if (array[j].compareTo(array[j + 1]) > 0)
                     SortingUtils.swap(array, j, j + 1);
     }
 

@@ -12,7 +12,7 @@ import ru.utils.SortingUtils;
  *
  * @param <T> Data type of array elements
  */
-public class InsertionSort<T extends Number> implements Sorter<T> {
+public class InsertionSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * 1. Iterate from array[1] to array[n] over the array;
@@ -26,7 +26,7 @@ public class InsertionSort<T extends Number> implements Sorter<T> {
     public void sort(T[] array) {
         for (int i = 1; i < array.length; i++) {
             int currIndex = i;
-            while (currIndex != 0 && array[currIndex].doubleValue() < array[currIndex - 1].doubleValue()) {
+            while (currIndex != 0 && array[currIndex].compareTo(array[currIndex - 1]) < 0) {
                 SortingUtils.swap(array, currIndex, --currIndex);
             }
         }

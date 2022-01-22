@@ -12,7 +12,7 @@ import java.util.Arrays;
  *
  * @param <T> Data type of array elements
  */
-public class MergeSort<T extends Number> implements Sorter<T> {
+public class MergeSort<T extends Comparable<? super T>> implements Sorter<T> {
 
     /**
      * Divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
@@ -56,7 +56,7 @@ public class MergeSort<T extends Number> implements Sorter<T> {
         int i = 0, j = 0;
         int k = left;
         while (i < leftLength && j < rightLength)
-            array[k++] = leftArr[i].doubleValue() <= rightArr[j].doubleValue() ? leftArr[i++] : rightArr[j++];
+            array[k++] = leftArr[i].compareTo(rightArr[j]) <= 0 ? leftArr[i++] : rightArr[j++];
         while (i < leftLength)
             array[k++] = leftArr[i++];
         while (j < rightLength)
