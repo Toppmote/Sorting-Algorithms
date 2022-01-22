@@ -111,4 +111,10 @@ public class TestAlgorithms {
         sortTest(new InsertionSort<>());
     }
 
+    @Test
+    @DisplayName("Odd-even Sort test")
+    void testOddEvenSort() {
+        sortTest(new OddEvenSort<>());
+    }
+
 }
