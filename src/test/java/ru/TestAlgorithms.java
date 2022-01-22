@@ -119,8 +119,14 @@ public class TestAlgorithms {
 
     @Test
     @DisplayName("Comb Sort test")
-    void testOCombSort() {
+    void testCombSort() {
         sortTest(new CombSort<>());
+    }
+
+    @Test
+    @DisplayName("Shell Sort test")
+    void testShellSort() {
+        sortTest(new ShellSort<>());
     }
 
 }
