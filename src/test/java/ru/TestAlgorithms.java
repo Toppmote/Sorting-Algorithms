@@ -117,4 +117,10 @@ public class TestAlgorithms {
         sortTest(new OddEvenSort<>());
     }
 
+    @Test
+    @DisplayName("Comb Sort test")
+    void testOCombSort() {
+        sortTest(new CombSort<>());
+    }
+
 }
