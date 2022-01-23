@@ -11,4 +11,4 @@ Implementation of some sorting algorithms in Java
 - Merge Sort;
 - Odd-Even Sort;
 - Selection Sort;
-- Shell Sort;
+- Shell Sort.
