@@ -129,4 +129,10 @@ public class TestAlgorithms {
         sortTest(new ShellSort<>());
     }
 
+    @Test
+    @DisplayName("Binary Insertion Sort test")
+    void testBinaryInsertionSort() {
+        sortTest(new BinaryInsertionSort<>());
+    }
+
 }
