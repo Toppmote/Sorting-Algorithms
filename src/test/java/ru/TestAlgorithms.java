@@ -135,4 +135,10 @@ public class TestAlgorithms {
         sortTest(new BinaryInsertionSort<>());
     }
 
+    @Test
+    @DisplayName("Cycle Sort test")
+    void testCycleSort() {
+        sortTest(new CycleSort<>());
+    }
+
 }
