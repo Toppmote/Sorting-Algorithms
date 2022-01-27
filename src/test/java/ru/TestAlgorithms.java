@@ -141,4 +141,10 @@ public class TestAlgorithms {
         sortTest(new CycleSort<>());
     }
 
+    @Test
+    @DisplayName("Gnome Sort test")
+    void testGnomeSort() {
+        sortTest(new GnomeSort<>());
+    }
+
 }
