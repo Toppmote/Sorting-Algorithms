@@ -6,6 +6,7 @@ Implementation of some sorting algorithms in Java
 - Cocktail Shaker Sort;
 - Comb Sort;
 - Cycle Sort;
+- Gnome Sort;
 - Heap Sort;
 - Insertion Sort;
 - Merge Sort;
